@@ -11,6 +11,8 @@ before_install:
 
 script:
   - docker run -e CI=true kawn12/docker-react-app npm run test -- --coverage
+  - echo $AWS_ACCESS_KEY
+  - echo $AWS_SECRET_ACCESS_KEY
 
 deploy:
   provider: elasticbeanstalk
